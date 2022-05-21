@@ -2,7 +2,7 @@ H指数是一种衡量论文作者影响力的指标：若作者发表的$n$篇�
 （1）若作者的被引次数依次为“0, 4, 12, 1, 5, 9, 3, 9”，则H指数为______。\
 （2）按照上述要求，编写Python函数。请在划线处填入合适的代码。
 ```py
-def calc_group_score(quoted):
+def calc_h_index(quoted):
     # 列表 quoted 中存储了被引次数
     n = len(quoted)
     c = [0] * (n + 1)
@@ -17,7 +17,7 @@ def calc_group_score(quoted):
             return ci
 
 quoted = [int(q) for q in input().split()]
-print(calc_group_score(quoted))
+print(calc_h_index(quoted))
 ```
 
 <!-- testcases
